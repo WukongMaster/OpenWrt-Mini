@@ -12,7 +12,7 @@ git clone https://github.com/BTC-LaoMa/luci-app-poweroff.git package/luci-app-po
 git clone https://github.com/BTC-LaoMa/luci-theme-opentomcat.git package/luci-theme-opentomcat
 
 # 添加OpenClash插件
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default
 
 # 添加PassWall插件
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
