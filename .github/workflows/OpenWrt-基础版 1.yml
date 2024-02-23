@@ -2,6 +2,8 @@ name:  OpenWrt-基础版1
 
 on: 
   workflow_dispatch:
+  schedule:
+    - cron: 01 00 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -154,7 +156,7 @@ jobs:
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
-      uses: softprops/action-gh-release@v0.1.15
+      uses: softprops/action-gh-release@main
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
@@ -171,7 +173,7 @@ jobs:
         keep_minimum_runs: 3
 
     - name: 删除旧版固件
-      uses: dev-drprasad/delete-older-releases@v0.3.2
+      uses: dev-drprasad/delete-older-releases@main
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 10
