@@ -9,7 +9,7 @@ sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 3-编译内核版本
-sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.12/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
 
 # 4-设置密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
