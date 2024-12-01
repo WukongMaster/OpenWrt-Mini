@@ -3,7 +3,7 @@ name:  OpenWrt-合集版
 on: 
   workflow_dispatch:
   schedule:
-    - cron: 01 00 * * *
+    - cron: 20 00 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -140,7 +140,7 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_ X86_64-合集版（支持ipv6）" >> release.txt
+        echo "OpenWrt-Mini_ X86_64（支持ipv6）" >> release.txt
         echo "默认地址：192.168.2.1" >> release.txt
         echo "默认密码：无密码" >> release.txt
         echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
@@ -152,7 +152,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 「 OpenWrt-6.12-合集版 」
+        name: ${{ env.FILE_TIME }} -OpenWrt-6.12-合集版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
