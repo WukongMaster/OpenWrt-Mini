@@ -141,7 +141,7 @@ jobs:
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
         echo "OpenWrt-Mini_ X86_64（支持ipv6）" >> release.txt
-        echo "默认地址：192.168.2.1" >> release.txt
+        echo "管理地址：192.168.2.1" >> release.txt
         echo "默认密码：无密码" >> release.txt
         echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
