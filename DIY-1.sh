@@ -1,7 +1,6 @@
 # DIY-1 此脚本功能：添加插件
 # =================================================================================================================
 
-
 # 1-添加 ShadowSocksR Plus+ 插件
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
