@@ -10,6 +10,7 @@ git clone https://github.com/WukongMaster/luci-app-poweroff.git package/luci-app
 # 3-添加 opentomcat 主题
 git clone https://github.com/WukongMaster/luci-theme-opentomcat.git package/luci-theme-opentomcat
 
+
 # 4-添加 OpenClash 插件
 sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default
 
