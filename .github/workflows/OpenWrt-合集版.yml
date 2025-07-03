@@ -2,8 +2,8 @@ name:  OpenWrt-合集版
 
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: 20 00 * * *
+#  schedule:
+#    - cron: 20 00 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
